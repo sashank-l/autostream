@@ -1,0 +1,128 @@
+{
+  "company": {
+    "name": "AutoStream",
+    "tagline": "Automated video editing tools for content creators",
+    "description": "AutoStream is a SaaS platform that provides AI-powered automated video editing tools designed for YouTube creators, Instagram influencers, and professional content producers."
+  },
+  "plans": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "price_monthly": 29,
+      "price_annual": 290,
+      "videos_per_month": 10,
+      "resolution": "720p",
+      "features": [
+        "10 videos per month",
+        "720p export resolution",
+        "Basic auto-cut and trim",
+        "Standard templates library",
+        "Email support"
+      ],
+      "limitations": [
+        "No AI captions",
+        "No 4K export",
+        "No 24/7 support",
+        "Limited to 10 videos per month"
+      ],
+      "best_for": "Hobbyists and beginners starting out with video content"
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "price_monthly": 79,
+      "price_annual": 790,
+      "videos_per_month": 100,
+      "resolution": "4K",
+      "features": [
+        "100 videos per month",
+        "4K export resolution",
+        "AI-powered auto captions",
+        "Advanced editing automation",
+        "Priority rendering queue",
+        "Full template library",
+        "24/7 dedicated support"
+      ],
+      "limitations": [],
+      "best_for": "Professional creators and agencies producing content at scale"
+    }
+  ],
+  "policies": [
+    {
+      "topic": "refunds",
+      "title": "Refund Policy",
+      "detail": "No refunds are issued after 7 days of purchase. Refund requests made within 7 days of the initial purchase date will be reviewed and processed within 3–5 business days."
+    },
+    {
+      "topic": "support",
+      "title": "Support Availability",
+      "detail": "24/7 customer support is available exclusively on the Pro plan. Basic plan users have access to email support during business hours only."
+    },
+    {
+      "topic": "upgrades",
+      "title": "Plan Upgrades",
+      "detail": "Users can upgrade from Basic to Pro at any time. The upgrade takes effect immediately and the billing difference is prorated for the remaining billing cycle."
+    },
+    {
+      "topic": "cancellation",
+      "title": "Cancellation Policy",
+      "detail": "Users can cancel their subscription at any time. Access continues until the end of the current billing period. No partial refunds are issued for unused days after the 7-day refund window."
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq_001",
+      "q": "What is the difference between the Basic and Pro plan?",
+      "a": "The Basic plan costs $29/month and allows 10 videos per month at 720p resolution. The Pro plan costs $79/month and includes unlimited videos, 4K resolution, AI captions, and 24/7 support."
+    },
+    {
+      "id": "faq_002",
+      "q": "Does AutoStream offer AI captions?",
+      "a": "Yes, AI captions are available exclusively on the Pro plan at $79/month."
+    },
+    {
+      "id": "faq_003",
+      "q": "Can I export videos in 4K?",
+      "a": "4K export is only available on the Pro plan. The Basic plan supports up to 720p resolution."
+    },
+    {
+      "id": "faq_004",
+      "q": "Is there a free trial?",
+      "a": "AutoStream offers a 7-day free trial on the Pro plan. No credit card is required to start the trial."
+    },
+    {
+      "id": "faq_005",
+      "q": "How many videos can I edit per month on the Basic plan?",
+      "a": "The Basic plan allows up to 10 videos per month. If you need more, you can upgrade to the Pro plan which has no monthly video limit."
+    },
+    {
+      "id": "faq_006",
+      "q": "Can I get a refund?",
+      "a": "Refunds are only available within the first 7 days of purchase. After 7 days, no refunds are issued."
+    },
+    {
+      "id": "faq_007",
+      "q": "Is 24/7 support available on all plans?",
+      "a": "No. 24/7 support is only available on the Pro plan. Basic plan users have email support during business hours."
+    },
+    {
+      "id": "faq_008",
+      "q": "Can I upgrade from Basic to Pro mid-month?",
+      "a": "Yes. Upgrades take effect immediately and billing is prorated for the remainder of the current cycle."
+    },
+    {
+      "id": "faq_009",
+      "q": "What platforms does AutoStream work best for?",
+      "a": "AutoStream is designed for content creators on YouTube, Instagram, TikTok, and other major video platforms."
+    },
+    {
+      "id": "faq_010",
+      "q": "What happens if I exceed my video limit on the Basic plan?",
+      "a": "Once you reach 10 videos on the Basic plan, you will need to wait for the next billing cycle or upgrade to the Pro plan for unlimited videos."
+    }
+  ],
+  "pricing_summary": {
+    "basic": "$29/month — 10 videos, 720p, email support",
+    "pro": "$79/month — 100 videos, 4K, AI captions, 24/7 support"
+  }
+}

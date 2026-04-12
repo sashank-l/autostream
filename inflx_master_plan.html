@@ -1,0 +1,240 @@
+
+<style>
+.section { margin: 0 0 28px; }
+.section-title { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-tertiary); margin: 0 0 10px; }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
+.cards-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+.card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; }
+.card-accent { border-left: 2px solid; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+.card-purple { border-left-color: #534AB7; }
+.card-teal { border-left-color: #0F6E56; }
+.card-amber { border-left-color: #854F0B; }
+.card-coral { border-left-color: #993C1D; }
+.card-blue { border-left-color: #185FA5; }
+.card-green { border-left-color: #3B6D11; }
+.label { font-size: 11px; font-weight: 500; color: var(--color-text-tertiary); margin: 0 0 4px; }
+.value { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; line-height: 1.4; }
+.sub { font-size: 12px; color: var(--color-text-secondary); margin: 0; line-height: 1.5; }
+.badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 20px; margin: 0 4px 4px 0; }
+.badge-purple { background: #EEEDFE; color: #3C3489; }
+.badge-teal { background: #E1F5EE; color: #085041; }
+.badge-amber { background: #FAEEDA; color: #633806; }
+.badge-coral { background: #FAECE7; color: #712B13; }
+.badge-blue { background: #E6F1FB; color: #0C447C; }
+.badge-green { background: #EAF3DE; color: #27500A; }
+.step { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
+.step-num { min-width: 22px; height: 22px; border-radius: 50%; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; color: var(--color-text-secondary); }
+.step-body { flex: 1; }
+.step-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+.step-sub { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+.divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 20px 0; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+</style>
+
+<h2 class="sr-only">Inflx assignment master plan covering strategy, deliverables, sugar coating, and build order</h2>
+
+<div style="padding: 1rem 0 0;">
+
+<div class="section">
+  <p class="section-title">What you're actually competing on</p>
+  <div class="cards">
+    <div class="card card-accent card-purple">
+      <p class="label">Eval criterion 1 + 2</p>
+      <p class="value">Agent reasoning + RAG</p>
+      <p class="sub">Intent classifier with confidence score. RAG with FAISS, not keyword search. Show your work in logs.</p>
+    </div>
+    <div class="card card-accent card-teal">
+      <p class="label">Eval criterion 3 + 4</p>
+      <p class="value">State + tool calling</p>
+      <p class="sub">TypedDict state, turn counter, guard that prevents premature tool fire. Reviewers will try to break this.</p>
+    </div>
+    <div class="card card-accent card-amber">
+      <p class="label">Eval criterion 5 + 6</p>
+      <p class="value">Code clarity + deployability</p>
+      <p class="sub">Modular files, typed nodes, .env config, Docker-ready. This is where the sugar coating multiplies your score.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <p class="section-title">The sugar coating strategy — what sets you apart</p>
+  <div class="cards-2">
+    <div class="card card-accent card-blue">
+      <p class="label">Beyond the spec</p>
+      <p class="value">Confidence scoring on intent</p>
+      <p class="sub">Instead of just returning "high_intent", return {"intent": "high_intent", "confidence": 0.91}. Displayed in the UI as a subtle badge. Zero extra effort, enormous signal of engineering maturity.</p>
+    </div>
+    <div class="card card-accent card-blue">
+      <p class="label">Beyond the spec</p>
+      <p class="value">RAG source citations</p>
+      <p class="sub">When agent answers from KB, show which document chunk it used. "Based on: Pro Plan pricing · company_policies.json". Proves RAG is actually working, not hallucinating.</p>
+    </div>
+    <div class="card card-accent card-green">
+      <p class="label">Frontend wow factor</p>
+      <p class="value">Real-time token streaming</p>
+      <p class="sub">SSE from FastAPI → Next.js. Tokens appear word by word. Every other submission will have a spinner + full response dump. This feels like a real product.</p>
+    </div>
+    <div class="card card-accent card-green">
+      <p class="label">Frontend wow factor</p>
+      <p class="value">Lead capture animation</p>
+      <p class="sub">When mock_lead_capture() fires, show a green "Lead captured" toast with confetti and write to a /leads dashboard page. Makes the demo video unforgettable.</p>
+    </div>
+    <div class="card card-accent card-coral">
+      <p class="label">README sugar</p>
+      <p class="value">Architecture diagram in README</p>
+      <p class="sub">Embed the system diagram as an image. Most READMEs are plain text. A diagram on first scroll signals you understand the whole system, not just the chatbot loop.</p>
+    </div>
+    <div class="card card-accent card-coral">
+      <p class="label">README sugar</p>
+      <p class="value">WhatsApp section done right</p>
+      <p class="sub">Don't just explain it — include a code snippet. FastAPI webhook handler, session keyed by phone number, outgoing reply via requests.post to WA Cloud API. 15 lines of actual code.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <p class="section-title">Complete folder structure</p>
+  <div class="card" style="font-family: var(--font-mono); font-size: 12px; color: var(--color-text-secondary); line-height: 2;">
+    <span style="color: var(--color-text-primary); font-weight: 500;">inflx-autostream/</span><br>
+    &nbsp;&nbsp;<span style="color: #185FA5;">backend/</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;app/<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agent/ &nbsp;<span style="color: var(--color-text-tertiary)">graph.py · state.py · router.py</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodes/ &nbsp;<span style="color: var(--color-text-tertiary)">intent.py · retriever.py · responder.py · lead_capture.py</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rag/ &nbsp;&nbsp;&nbsp;<span style="color: var(--color-text-tertiary)">knowledge_base.json · indexer.py · retriever.py</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tools/ &nbsp;<span style="color: var(--color-text-tertiary)">mock_lead.py</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;api/ &nbsp;&nbsp;&nbsp;<span style="color: var(--color-text-tertiary)">chat.py · leads.py</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db/ &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--color-text-tertiary)">models.py · session.py</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.py · config.py<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;requirements.txt · .env.example · Dockerfile<br>
+    &nbsp;&nbsp;<span style="color: #0F6E56;">frontend/</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;app/ &nbsp;&nbsp;&nbsp;<span style="color: var(--color-text-tertiary)">page.tsx · leads/page.tsx · layout.tsx</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;components/ <span style="color: var(--color-text-tertiary)">ChatWindow · MessageBubble · InputBar · LeadBadge · LeadDashboard</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;lib/ &nbsp;&nbsp;&nbsp;<span style="color: var(--color-text-tertiary)">api.ts</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;package.json · Dockerfile<br>
+    &nbsp;&nbsp;<span style="color: #854F0B;">docs/</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;architecture.png &nbsp;<span style="color: var(--color-text-tertiary)">(diagram screenshot for README)</span><br>
+    &nbsp;&nbsp;docker-compose.yml · README.md
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <p class="section-title">Build order — 8 steps, ~2 days</p>
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <p class="step-title">AgentState + graph skeleton</p>
+      <p class="step-sub">TypedDict with intent, collected, retrieved_context, lead_captured, turn_count. All nodes as stubs returning dummy strings. Verify graph compiles and runs end-to-end.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <p class="step-title">knowledge_base.json + RAG indexer</p>
+      <p class="step-sub">JSON with plans, policies, faqs arrays. Indexer converts to Documents, builds FAISS + MiniLM at startup. Test retrieval with 3-4 sample queries before wiring into agent.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <p class="step-title">Intent classifier node</p>
+      <p class="step-sub">Strict system prompt returning JSON: {"intent": "...", "confidence": 0.0–1.0}. Test all edge cases — "I'm interested" must map to high_intent, "how much" to inquiry. Log outputs during dev.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <p class="step-title">Lead collect node + router guard</p>
+      <p class="step-sub">State tracks collected = {}. Node asks for next missing field. Router checks all_fields_collected() before allowing execute_lead_capture. Write a test that tries to skip email — must fail.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+      <p class="step-title">FastAPI + SSE streaming endpoint</p>
+      <p class="step-sub">POST /chat accepts session_id + message. GET /stream/{id} returns text/event-stream. Session state persisted in-memory dict keyed by session_id. Test with curl before building UI.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">6</div>
+    <div class="step-body">
+      <p class="step-title">Next.js chat UI</p>
+      <p class="step-sub">ChatWindow.tsx with EventSource consuming SSE. Token-by-token rendering. Intent badge shown when agent detects high_intent. LeadBadge toast fires on lead_captured: true in stream.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">7</div>
+    <div class="step-body">
+      <p class="step-title">Leads dashboard + demo prep</p>
+      <p class="step-sub">/leads page shows table of captured leads from SQLite. Prep the exact demo script: pricing Q → intent shift → collect 3 fields → capture fires. Practice it twice before recording.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">8</div>
+    <div class="step-body">
+      <p class="step-title">README + requirements.txt + .env.example</p>
+      <p class="step-sub">Architecture section ~200 words. WhatsApp section with actual code snippet. Embed diagram image. requirements.txt pinned versions. .env.example with placeholder keys. docker-compose optional but impactful.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <p class="section-title">Demo video script — 2.5 min, no wasted time</p>
+  <div class="card">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div style="display: flex; gap: 10px; align-items: baseline;">
+        <span style="min-width: 60px; font-size: 11px; color: var(--color-text-tertiary);">0:00–0:20</span>
+        <span style="font-size: 13px; color: var(--color-text-primary);">Show the UI cold. No intro monologue. Type "Hi, what's the difference between your plans?" — let the streaming response speak for itself.</span>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: baseline;">
+        <span style="min-width: 60px; font-size: 11px; color: var(--color-text-tertiary);">0:20–0:50</span>
+        <span style="font-size: 13px; color: var(--color-text-primary);">Ask a policy question: "Can I get a refund?" — agent pulls from KB, shows source citation badge. Pause briefly, let reviewer see the RAG in action.</span>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: baseline;">
+        <span style="min-width: 60px; font-size: 11px; color: var(--color-text-tertiary);">0:50–1:20</span>
+        <span style="font-size: 13px; color: var(--color-text-primary);">Type "I want to sign up for Pro for my YouTube channel." — intent badge flips to HIGH INTENT. Agent pivots to asking for name.</span>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: baseline;">
+        <span style="min-width: 60px; font-size: 11px; color: var(--color-text-tertiary);">1:20–1:55</span>
+        <span style="font-size: 13px; color: var(--color-text-primary);">Collect name, email, platform across 3 turns. Show that agent remembers what it already collected — doesn't ask for name twice.</span>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: baseline;">
+        <span style="min-width: 60px; font-size: 11px; color: var(--color-text-tertiary);">1:55–2:20</span>
+        <span style="font-size: 13px; color: var(--color-text-primary);">Lead capture fires. Show the green toast + confetti. Split-screen or switch tab to /leads dashboard — new row visible. Show terminal log: "Lead captured: ..."</span>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: baseline;">
+        <span style="min-width: 60px; font-size: 11px; color: var(--color-text-tertiary);">2:20–2:30</span>
+        <span style="font-size: 13px; color: var(--color-text-primary);">Briefly show the graph.py and state.py in VS Code. 10 seconds. Signals clean code without narrating it.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <p class="section-title">Stack summary</p>
+  <div class="tag-row">
+    <span class="badge badge-purple">LangGraph StateGraph</span>
+    <span class="badge badge-purple">AgentState TypedDict</span>
+    <span class="badge badge-teal">FastAPI + SSE</span>
+    <span class="badge badge-teal">FAISS + MiniLM</span>
+    <span class="badge badge-blue">Next.js 14 App Router</span>
+    <span class="badge badge-blue">EventSource streaming</span>
+    <span class="badge badge-amber">Claude 3 Haiku</span>
+    <span class="badge badge-amber">knowledge_base.json</span>
+    <span class="badge badge-green">SQLite leads DB</span>
+    <span class="badge badge-green">docker-compose</span>
+    <span class="badge badge-coral">Confidence scoring</span>
+    <span class="badge badge-coral">Source citations</span>
+  </div>
+</div>
+
+</div>
