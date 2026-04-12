@@ -4,6 +4,9 @@ Hey! This is my submission for the AI Lead Generation Agent. I built this using 
 
 Here's how to get it running.
 
+[![Watch the video](https://youtube.com)](https://youtu.be/l6BGkFg2PXg)
+
+
 ## Local Setup
 
 ### 1. The Backend
