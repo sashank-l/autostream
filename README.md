@@ -4,8 +4,14 @@ Hey! This is my submission for the AI Lead Generation Agent. I built this using 
 
 Here's how to get it running.
 
-[![Watch the video](https://youtube.com)](https://youtu.be/l6BGkFg2PXg)
 
+<p align="center">
+  <a href="https://youtu.be/l6BGkFg2PXg">
+    <img src="https://i3.ytimg.com/vi/l6BGkFg2PXg/maxresdefault.jpg" />
+  </a>
+  <br/>
+  ▶️ <b>Click to watch project walkthrough</b>
+</p>
 
 ## Local Setup
 
