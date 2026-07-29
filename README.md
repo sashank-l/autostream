@@ -83,11 +83,3 @@ Here is exactly how I would build it:
 
 ---
 
-## Evaluation Criteria Addressed
-
-1. **Agent reasoning & intent detection**: Intent is continuously evaluated via a dedicated LangGraph node analyzing the last 6 conversation turns, enabling dynamic switching between casual chat, RAG inquiries, and high-intent sales capture.
-2. **Correct use of RAG**: RAG is decoupled from the main LLM loop; it strictly executes via deterministic LangChain `@tool` binding only when the intent classifier identifies an inquiry, guaranteeing zero hallucinated data fetches.
-3. **Clean state management**: LangGraph acts as a strict Finite State Machine. The `AgentState` dictionary enforces purely immutable state transitions for messages, confidence scores, and passively extracted lead data cleanly across FastAPI boundaries.
-4. **Proper tool calling logic**: Tools are rigorously defined with strict docstrings for the Groq/LLaMA engine, ensuring the AI autonomously delegates tasks (like `get_pricing` or `get_plans`) only when mathematically confident.
-5. **Code clarity & structure**: The architecture is fully modularized—nodes (intent, extractor, retriever, responder), utilities, models, and graph routing logic are completely isolated in their own cleanly-typed Python files.
-6. **Real-world deployability**: Production-ready configuration including Next.js Server-Sent Events (SSE) streaming, asynchronous Python endpoints, CORS security, and comprehensive environment variable abstraction for instant cloud deployment.
